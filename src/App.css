@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Styling the chess board section in the App.js file. */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: rgb(34, 34, 34);
+  
 }
 
-.App-link {
-  color: #61dafb;
+.chessBoardDiv{
+  height: 700px;
+  width: 700px
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styling the HTML elements from the MyChessBoard.js component.*/
+
+.chessBoard{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chessSquare{
+  width: 12.5%;
+  height: 12.5%;
+}
+
+/* Styling components on the IndividualSquares.js component. */
+
+.square-black{
+  background: #b59963;
+}
+
+.square-white{
+  background: #F0D9B5;
+}
+
+/* The class below goes into the IndividualSquares.js component as well as the ChessBoardSquares.js component. */
+
+.board-square{
+  height: 100%;
+  width: 100%;
 }
