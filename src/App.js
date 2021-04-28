@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { chessGameSubject } from "./Components/MyChessGame";
+import {
+  chessGameSubject,
+  initialiseGame,
+  chessGamesRestart,
+} from "./Components/MyChessGame";
 import MyChessBoard from "./Components/MyChessBoard";
 import "./App.css";
 
@@ -7,22 +11,37 @@ function App() {
   /* Setting state for the chess board to be an empty array. */
   const [chessBoard, setChessBoard] = useState([]);
 
+  /* Setting state when the chess game is finished and also for the result of the game. */
+
+  const [isGameFinished, setIsGameFinished] = useState();
+  const [resultOfGame, setResultOfGame] = useState();
+
   /* Implementing the useEffect hook in order to informReact that the component
      needs to perform an action after it has been rendered. */
   useEffect(() => {
+    initialiseGame();
     /* As 'chessGameSubject' is an observable we have access to the suscribe and unsubscribe properties.  */
-    const playerSubscribes = chessGameSubject.subscribe((chessGame) =>
-      setChessBoard(chessGame.chessBoard)
-    );
+    const playerSubscribes = chessGameSubject.subscribe((chessGame) => {
+      setChessBoard(chessGame.chessBoard);
+      setIsGameFinished(chessGame.chessGameIsDone);
+      setResultOfGame(chessGame.result);
+    });
     /* Unsubscribing. */
     return () => playerSubscribes.unsubscribe();
   }, []);
   return (
     <div className="App">
-      {/* <h1>Welcome to my chess game.</h1> */}
+      {isGameFinished && (
+        <div className="gameOverDiv">
+          <h5>Chess Game Is Over</h5>
+          <button onClick={chessGamesRestart}>Play Another Game</button>
+        </div>
+      )}
       <div className="chessBoardDiv">
         <MyChessBoard chessBoard={chessBoard} />
       </div>
+      {/* Writing the necessary JSX to display the result of the game on the web page. */}
+      {resultOfGame && <span>{resultOfGame}</span>}
     </div>
   );
 }

@@ -49,3 +49,29 @@
   height: 100%;
   width: 100%;
 }
+
+/* Styling HTML elements in the ChessPieces.js component. */
+
+.chessPieceDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  cursor: grab;
+}
+
+.individualChessPieces{
+  max-width: 65%;
+  max-height: 65%;
+}
+
+/* Styling the HTML elements in the PlayerPromotion.js component. */
+
+.playerPromotionBlock{
+  width: 50%;
+  height: 50%;
+  
+}
+
+
