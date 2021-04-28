@@ -4,23 +4,8 @@ import * as Chess from "chess.js";
 /* rxjs is a library that can be used to create observables. */
 import { BehaviorSubject } from "rxjs";
 
-/* Creating a variable to store the details of the board that will be required when a player receives a promotion.
-   A promotion occus when a pawn reaches the eighth rank, this will result in that player's pawn being replaced
-   by a choice of a knight, rook, queen or bishop.  */
-
-// let playerPromotion =
-//   "rnb2bnr/pppPkppp/8/4p3/7q/8/PPPP1PPP/RNBQKBNR w KQ - 1 5";
-
-/* Creating variables for other situations in the chess game such as stale mate, check mate and insufficient material.
-     The insufficient material rule comes into play when there isn't a move that can end the game and the game will be
-     declared as a draw. */
-
-// let checkMate = "rnb1kbnr/pppp1ppp/8/4p3/5PPq/8/PPPPP2P/RNBQKBNR w KQkq - 1 3";
-// let insufficientMaterial = "k7/8/n7/8/8/8/8/7K b - - 0 1";
-// let staleMate = "4k3/4P3/4K3/8/8/8/8/8 b - - 0 78";
-
 /* Setting a constant called chessGame which will create a new chess game using the Library we have imported above. */
-const chessGame = new Chess(); /* add staleMate if needed.*/
+const chessGame = new Chess();
 
 export const chessGameSubject = new BehaviorSubject();
 
@@ -41,8 +26,6 @@ export function initialiseGame() {
   }
   chessGameUpdate();
 }
-
-/* Creating a function to  */
 
 /* Creating a handler to check if the player is going to receive a promotion. */
 
@@ -83,7 +66,7 @@ export function moveChessPiece(from, to, promotion) {
   }
   const isMoveAllowed = chessGame.move(playerTempMove);
   if (isMoveAllowed) {
-    /* Calling the chessGameUpdate function to update the chess game.*/
+    /* Calling the chessGameUpdate function to update the chess game. */
     chessGameUpdate();
   }
 }

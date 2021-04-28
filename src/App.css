@@ -3,15 +3,16 @@
   margin: 0;
 }
 
-/* Styling the chess board section in the App.js file. */
+/* Styling the chess board section. */
 
 .App{
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(34, 34, 34);
-  
+  background: lightgray;
+  padding-bottom: 30px;
+  margin-top: -30px;
 }
 
 .chessBoardDiv{
@@ -19,59 +20,46 @@
   width: 700px
 }
 
-/* Styling the HTML elements from the MyChessBoard.js component.*/
-
-.chessBoard{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+.mainHeading{
+  text-align: center;
+  padding-bottom: 15px;
+  text-decoration: underline;
 }
 
-.chessSquare{
-  width: 12.5%;
-  height: 12.5%;
+.gameOverDiv{
+  margin-right: 50px;
+  width: 200px;
+  height: 150px;
+  text-align: center;
 }
 
-/* Styling components on the IndividualSquares.js component. */
-
-.square-black{
-  background: #b59963;
+.playAgainButton{
+  cursor: pointer;
+  height: 50px;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  background: black;
+  color: #fff;
+  margin-top: 30px;
 }
 
-.square-white{
-  background: #F0D9B5;
+.playAgainButton:hover{
+  background: orangered;
+  color: #fff;
 }
 
-/* The class below goes into the IndividualSquares.js component as well as the ChessBoardSquares.js component. */
-
-.board-square{
-  height: 100%;
-  width: 100%;
+.gameOverNotification{
+  font-size: 1.5rem;
 }
 
-/* Styling HTML elements in the ChessPieces.js component. */
-
-.chessPieceDiv{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  cursor: grab;
-}
-
-.individualChessPieces{
-  max-width: 65%;
-  max-height: 65%;
-}
-
-/* Styling the HTML elements in the PlayerPromotion.js component. */
-
-.playerPromotionBlock{
-  width: 50%;
-  height: 50%;
-  
+.chessGameResult{
+  font-size: 1.5rem;
+  padding-top: 50px;
+  margin-left: 50px;
+  width: 200px;
+  height: 150px;
+  text-align: center;
 }
 
 

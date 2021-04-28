@@ -1,0 +1,15 @@
+/* Styling the chess piece div and the individual chess pieces. */
+
+.chessPieceDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    cursor: grab;
+  }
+  
+  .individualChessPieces{
+    max-width: 65%;
+    max-height: 65%;
+  }

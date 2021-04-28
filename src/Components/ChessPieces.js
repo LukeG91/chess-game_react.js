@@ -1,4 +1,5 @@
 import React from "react";
+import "./ChessPieces.css";
 /* Importing the useDrag and DragPreviewImage hooks from the react-dnd library. */
 import { useDrag, DragPreviewImage } from "react-dnd";
 
@@ -22,11 +23,7 @@ function ChessPieces({ chessPiece: { type, color }, obtainPiecePosition }) {
       {/* Adding opacity to the style of the image so that when a player drags a chess piece it no longer
           shows on the position that it was on prior to the player moving it. */}
       <DragPreviewImage connect={preview} src={chessPiecePicture} />
-      <div
-        style={{ opacity: isDragging ? 0 : 1 }}
-        className="chessPieceDiv"
-        ref={drag}
-      >
+      <div className="chessPieceDiv" ref={drag}>
         <img
           src={chessPiecePicture}
           alt="Chess pieces"

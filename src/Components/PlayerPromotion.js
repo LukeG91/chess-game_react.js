@@ -1,6 +1,7 @@
 import React from "react";
 import IndividualSquares from "./IndividualSquares";
 import { moveChessPiece } from "./MyChessGame";
+import "./PlayerPromotion.css";
 
 /* Declaring a variable to store the chess pieces that can be swapped out when a player receives a promotion. */
 

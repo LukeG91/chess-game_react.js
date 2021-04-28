@@ -1,5 +1,6 @@
 import React from "react";
 import ChessBoardSquares from "./ChessBoardSquares";
+import "./MyChessBoard.css";
 
 export default function MyChessBoard({ chessBoard }) {
   /* Declaring functions to get the X and Y position of the chess piece on the board, as well as to 

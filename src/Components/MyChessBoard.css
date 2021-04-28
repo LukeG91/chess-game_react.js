@@ -1,0 +1,13 @@
+/* Styling the chess board and the chess squares. */
+
+.chessBoard{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .chessSquare{
+    width: 12.5%;
+    height: 12.5%;
+  }

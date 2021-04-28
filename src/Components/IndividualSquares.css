@@ -1,0 +1,14 @@
+/* Styling the squares on the chess board. */
+
+.square-darkblue{
+    background: #5aa897;
+  }
+  
+  .square-white{
+    background: #c0fefc;
+  }
+
+  .board-square{
+    height: 100%;
+    width: 100%;
+  }
