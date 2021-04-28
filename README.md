@@ -1,4 +1,86 @@
-# Getting Started with Create React App
+<a name="title"></a>
+
+# Welcome to my chess game bult with React.js:
+
+<a name="description"></a>
+
+### Project Description:
+
+This project relates to a game that I needed to build for a task within my coding bootcamp. I decided to create a local multiplayer chess game.
+
+<a name="contents"></a>
+
+# Table of contents
+
+- [Project name](#title)
+- [Project description](#description)
+- [Table of contents](#contents)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Screenshots](#screenshots)
+
+# Installation
+
+#### Step 1
+
+```bash
+    Open your terminal
+    cd "your-projects-folder"
+```
+
+#### Step 2
+
+```bash
+git clone https://github.com/LukeG91/chess-game_react.js.git
+```
+
+#### Step 3
+
+```bash
+Open VS code or the code editor that you use and open the project folder that you just downloaded.
+```
+
+#### Step 4
+
+```bash
+Run the following commands:
+
+npm install
+npm install rxjs react-dnd react-dnd-html5-backend chess.js
+npm install --save react-router-dom
+```
+
+#### Step 5
+
+```bash
+Start the app by running the following command:
+
+npm start
+```
+
+<a name="usage"></a>
+
+#### Usage
+
+`The screenshots below display the different pages on the web app as well as how to interact with the app.`
+
+<a name="screenshots"></a>
+
+# Screenshots
+
+#### Home page
+
+![home page](src/Screenshots/landingPage.png)
+
+#### Enter players names
+
+![player names](src/Screenshots/playerNamePrompt.png)
+
+#### Play chess game
+
+![play game](src/Screenshots/chessGame.png)
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +149,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
