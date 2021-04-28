@@ -15,13 +15,13 @@ function ChessBoardSquares({ chessPiece, black, obtainPiecePosition }) {
   const [, drop] = useDrop({
     accept: "chessPiece",
     drop: (item) => {
-      /* Using the split() method to split the string of the ID linked to item with an underscore (_). */
+      /* Using the split() method to split the string of the ID linked to the item with an underscore (_). */
       const [startingPosition] = item.id.split("_");
       chessMoveHandler(startingPosition, obtainPiecePosition);
     },
   });
-  /* The code below is going to be used to check when a player will receive a promotion. */
 
+  /* The code below is going to be used to check when a player will receive a promotion. */
   useEffect(() => {
     const newSubscription = chessGameSubject.subscribe(
       ({ playerAwaitingPromotion }) =>
@@ -31,12 +31,11 @@ function ChessBoardSquares({ chessPiece, black, obtainPiecePosition }) {
           : setPlayerPromo(null)
     );
     return () =>
-      newSubscription.unsubscribe(); /* Calling the unsubscribe method as it is available in the observable. */
+      newSubscription.unsubscribe(); /* Calling the unsubscribe method, this is available in the observable. */
   }, []);
 
   return (
-    /* Adding the ref tag to the 'board-square' Div. The ref tag is used in React to allow access to a DOM element whereby changes need to be
-       made to a child component without using props.*/
+    /* Adding the ref tag to the 'board-square' Div. The ref tag is used in React to allow access to a DOM element. */
     <div className="board-square" ref={drop}>
       <IndividualSquares black={black}>
         {playerPromo ? (

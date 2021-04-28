@@ -6,8 +6,19 @@ import { useDrag, DragPreviewImage } from "react-dnd";
 function ChessPieces({ chessPiece: { type, color }, obtainPiecePosition }) {
   const chessPiecePicture = `./chess-piece-images/${type}_${color}.png`;
 
-  /* Destructuring an array with items from the useDrag hook
+  /* Destructuring an array using the useDrag hook
      and I am setting an item object. */
+
+  /* There was a change made in the react-dnd library to the useDrag hook, I am using version 14.0 so I needed
+     to write the code the new way in order to use the useDrag hook successfully. */
+
+  /*================================================================================
+    Resource used for the code below:
+          GitHub page:
+          Link to page: https://github.com/react-dnd/react-dnd/releases/tag/v14.0.0
+          Publisher: React DnD
+          Date publsihed: 25 Mrach, 2021
+  ================================================================================*/
 
   const [{ isDragging }, drag, preview] = useDrag({
     type: "chessPiece",
@@ -19,9 +30,8 @@ function ChessPieces({ chessPiece: { type, color }, obtainPiecePosition }) {
 
   return (
     <>
-      {/* Adding the ref tag to the 'chessPieceDiv'. */}
-      {/* Adding opacity to the style of the image so that when a player drags a chess piece it no longer
-          shows on the position that it was on prior to the player moving it. */}
+      {/* Adding the ref tag to the 'chessPieceDiv', this provides a way to access DOM elements. */}
+
       <DragPreviewImage connect={preview} src={chessPiecePicture} />
       <div className="chessPieceDiv" ref={drag}>
         <img

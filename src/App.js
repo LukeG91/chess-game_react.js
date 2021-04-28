@@ -62,6 +62,18 @@ function App() {
         <h1 className="mainHeading">
           <em>Welcome to Luke's chess game:</em>
         </h1>
+        <p className="rulesParagraph">
+          If you don't know how to play chess, click this{" "}
+          <a
+            href="https://www.instructables.com/Playing-Chess/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <em>link</em>
+          </a>{" "}
+          to learn the rules.
+        </p>
+
         <MyChessBoard chessBoard={chessBoard} />
       </div>
       {/* Writing the necessary JSX to display the result of the game on the web page. */}

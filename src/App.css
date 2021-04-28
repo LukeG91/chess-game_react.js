@@ -12,7 +12,7 @@
   align-items: center;
   background: lightgray;
   padding-bottom: 30px;
-  margin-top: -30px;
+  margin-top: -40px;
 }
 
 .chessBoardDiv{
@@ -62,4 +62,8 @@
   text-align: center;
 }
 
-
+.rulesParagraph{
+  text-align: center;
+  padding-bottom: 10px;
+  margin-top: -10px;
+}

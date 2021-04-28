@@ -3,8 +3,7 @@ import ChessBoardSquares from "./ChessBoardSquares";
 import "./MyChessBoard.css";
 
 export default function MyChessBoard({ chessBoard }) {
-  /* Declaring functions to get the X and Y position of the chess piece on the board, as well as to 
-     check if the color of the chess pisce. */
+  /* Declaring functions to get the X and Y positions and to check colors on the board. */
   function retrieveXandYposition(i) {
     const x = i % 8;
     const y = Math.abs(Math.floor(i / 8) - 7);
@@ -15,7 +14,7 @@ export default function MyChessBoard({ chessBoard }) {
     return (x + y) % 2 === 1;
   }
 
-  /* Declaring a function toobtain the position of the chess piece which will accept the index(i) as a parameter. */
+  /* Declaring a function to obtain the position of the chess piece which will accept the index(i) as a parameter. */
   function obtainPiecePosition(i) {
     const { x, y } = retrieveXandYposition(i);
     /* Declaring an array to contain all of the letters on the X axis of the chess board so that I can return the 
@@ -40,22 +39,3 @@ export default function MyChessBoard({ chessBoard }) {
     </div>
   );
 }
-
-// import React from "react";
-
-// export const MyChessBoard = ({ chessBoard }) => {
-//   return (
-//     /* Returning the JSX needed on the web page. */
-//     <div id="chessBoard">
-//       {/* Mapping through the chessBoard array */}
-//       {chessBoard.map((chessPiece, item) => (
-//         /* Giving each item a key which will be set to 'item'. */
-//         <div key={item}>
-//           <p>{JSON.stringify(chessPiece)}</p>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default MyChessBoard;
