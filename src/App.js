@@ -11,20 +11,21 @@ function App() {
   /* Writing code to display a prompt to as the players what their names are and then a message
      will be displayed on the web page once the players have entered their names. */
 
-  // function getPlayersNames() {
-  //   let getPlayerOneName = prompt("Player 1, what is your name: ");
-  //   let getPlayerTwoName = prompt("Player 2, what is your name: ");
+  function getPlayersNames() {
+    let getPlayerOneName = prompt("Player 1, what is your name: ");
+    let getPlayerTwoName = prompt("Player 2, what is your name: ");
 
-  //   alert(
-  //     "Welcome to my chess game " +
-  //       getPlayerOneName +
-  //       getPlayerTwoName +
-  //       "\n" +
-  //       "Best of luck!" +
-  //       "\n" +
-  //       "May the force be with you!"
-  //   );
-  // }
+    alert(
+      "Welcome to my chess game " +
+        getPlayerOneName +
+        " and " +
+        getPlayerTwoName +
+        "\n" +
+        "Best of luck!" +
+        "\n" +
+        "May the force be with you!"
+    );
+  }
 
   /* Setting state for the chess board to be an empty array. */
   const [chessBoard, setChessBoard] = useState([]);
@@ -37,7 +38,7 @@ function App() {
   /* Implementing the useEffect hook in order to informReact that the component
      needs to perform an action after it has been rendered. */
   useEffect(() => {
-    // getPlayersNames();
+    getPlayersNames();
     initialiseGame();
     /* As 'chessGameSubject' is an observable we have access to the suscribe and unsubscribe properties.  */
     const playerSubscribes = chessGameSubject.subscribe((chessGame) => {
