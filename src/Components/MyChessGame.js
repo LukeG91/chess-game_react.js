@@ -30,6 +30,16 @@ export function initialiseGame() {
 }
 
 /* Creating a handler to check if the player is going to receive a promotion. */
+
+/*============================================================================================
+Resource used for the code below:
+YouTube video:
+Title of video: React Tutorial: Build a chess ♖ game with react ,rxjs and react drag and drop
+Publisher: Esteban Codes
+Date published: August 25, 2020
+Link to video: https://www.youtube.com/watch?v=kBR7pDLcC3A&t=617s
+/*============================================================================================*/
+
 export function chessMoveHandler(from, to) {
   /* Using verbose to obtain an array of all of the possible chess moves.*/
   /* Filtering through the array to select the promotions only. */

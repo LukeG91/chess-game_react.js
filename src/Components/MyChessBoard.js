@@ -2,6 +2,15 @@ import React from "react";
 import ChessBoardSquares from "./ChessBoardSquares";
 import "./MyChessBoard.css";
 
+/*============================================================================================
+Resource used for the code below:
+YouTube video:
+Title of video: React Tutorial: Build a chess ♖ game with react ,rxjs and react drag and drop
+Publisher: Esteban Codes
+Date published: August 25, 2020
+Link to video: https://www.youtube.com/watch?v=kBR7pDLcC3A&t=617s
+/*============================================================================================*/
+
 export default function MyChessBoard({ chessBoard }) {
   /* Declaring functions to get the X and Y positions and to check colors on the board. */
   function retrieveXandYposition(i) {
