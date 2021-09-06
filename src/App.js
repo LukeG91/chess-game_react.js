@@ -60,9 +60,9 @@ function App() {
         </div>
       )}
       <div className="chessBoardDiv">
-        <h1 className="mainHeading">
+        {/* <h1 className="mainHeading">
           <em>Welcome to Luke's chess game:</em>
-        </h1>
+        </h1> */}
         <p className="rulesParagraph">
           If you don't know how to play chess, click this{" "}
           <a

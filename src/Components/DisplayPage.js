@@ -22,11 +22,11 @@ function DisplayPage() {
         {/* Rendering out the name that the player provides. */}
         <h2 className="welcomeChessPlayer">Welcome: {name} </h2>
         <h2 className="wishPlayerWell">Best of luck and enjoy the game!</h2>
-        <p className="informingParagraph">
+        {/* <p className="informingParagraph">
           <em>Please click the link below to proceed to the chess game.</em>
-        </p>
+        </p> */}
         <a href="/app" className="linkToAppPage">
-          Click Me
+          Start game
         </a>
       </div>
     </div>

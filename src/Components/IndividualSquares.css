@@ -1,11 +1,11 @@
 /* Styling the squares on the chess board. */
 
 .square-darkblue{
-    background: #5aa897;
+    background: rgb(184, 139, 74);
   }
   
   .square-white{
-    background: #c0fefc;
+    background: rgb(227, 193, 111);
   }
 
   .board-square{
